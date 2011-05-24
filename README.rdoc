@@ -1,38 +1,27 @@
-= Uniquify
+= Uniquify for Mongoid
 
-Rails gem for generating a unique token in an Active Record model.
+Rails gem for generating a unique token in an Mongoid field.
 
-This is from Railscasts episode #135 showing how to make a gem.
-
-http://railscasts.com/episodes/135-making-a-gem
-
+Initiality forked from Ryan Bates uniquify gem
 
 == Install
 
-  gem install ryanb-uniquify --source http://gems.github.com
+gem "uniquify", :git => 'git@github.com:guiora/uniquify.git'
 
 
 == Usage
 
-Let's say you have a Project model with a "token" string column that you 
-want to be a unique identifier. Just add this to your model.
-
-  class Project < ActiveRecord::Base
-    uniquify :token
+  class Project
+		include Mongoid::Document
+	  include Mongoid::Uniquify
+	
+    field :token, :uniquify => true
   end
-
-This will generate a random and unique string before each book is 
-created.
 
 You can specify multiple columns ands options like this.
 
-  uniquify :token, :salt, :length => 12, :chars => 0..9
+  field :token, :uniquify, :length => 12, :chars => 0..9
 
-You can also pass a block to generate your own characters.
-
-  uniquify :token do
-    rand(99999)
-  end
 
 If the generated value already exists, the block will be run again 
 until the value is unique.
