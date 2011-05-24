@@ -6,19 +6,20 @@ Initiality forked from Ryan Bates uniquify gem
 
 == Install
 
-gem "uniquify", :git => 'git@github.com:guiora/uniquify.git'
+  gem "uniquify", :git => 'git@github.com:guiora/uniquify.git'
 
 
 == Usage
 
   class Project
-		include Mongoid::Document
-	  include Mongoid::Uniquify
-	
+    include Mongoid::Document
+    include Mongoid::Uniquify
+
     field :token, :uniquify => true
+
   end
 
-You can specify multiple columns ands options like this.
+You can specify options like this.
 
   field :token, :uniquify, :length => 12, :chars => 0..9
 
