@@ -9,7 +9,6 @@ Gem::Specification.new do |s|
   s.email = %q{ryan@railscasts.com}
   s.extra_rdoc_files = ["lib/uniquify.rb", "README.rdoc"]
   s.files = ["lib/uniquify.rb", "Rakefile", "README.rdoc", "uniquify.gemspec"]
-  s.has_rdoc = true
   s.homepage = %q{http://github.com/ryanb/uniquify}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Uniquify", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
