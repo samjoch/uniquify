@@ -2,7 +2,7 @@
 
 Rails gem for generating a unique token in an Mongoid field.
 
-Initiality forked from Ryan Bates uniquify gem
+Originally forked from Ryan Bates uniquify gem
 
 == Install
 
