@@ -1,3 +1,7 @@
+[:length, :chars, :string, :uniquify].each do |master_field|
+  Mongoid::Fields.option master_field do |model, field, value|
+  end
+end
 module Mongoid::Uniquify
 
   def ensure_unique(name)
