@@ -21,7 +21,7 @@ Originally forked from Ryan Bates uniquify gem
 
 You can specify options like this.
 
-  field :token, :uniquify, :length => 12, :chars => 0..9
+  field :token, :uniquify => true, :length => 12, :chars => 0..9
 
 
 If the generated value already exists, the block will be run again 
